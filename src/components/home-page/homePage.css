@@ -1,0 +1,45 @@
+.home-page .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  /* border: 1px solid rgba(0, 0, 0, .05); */
+  box-shadow: inset 8px 8px 8px #d9dbdc, inset -5px -5px 5px #ffffff;
+  border-radius: 25px;
+  outline: 0px;
+  background-color: #ebeff2 !important;
+  background-clip: border-box;
+}
+.home-page .card-stats .card-body {
+  padding: 2rem 1.5rem;
+}
+.big-font {
+  font-size: 2.25rem !important;
+}
+.badge-shadow {
+  box-shadow: inset 8px 8px 8px #d9dbdc, inset -5px -5px 5px #ffffff;
+  outline: 0px;
+  background-color: #ebeff2 !important;
+  background-clip: border-box;
+}
+.nav-link .ni {
+  font-size: 22px;
+}
+.badge-circle {
+  position: absolute;
+  top: 12px;
+  right: 14.9%;
+}
+#sidenav-main {
+  box-shadow: inset 8px 8px 8px #ebeff2, inset -5px -5px 15px #fff !important;
+  outline: 0px;
+  background-color: #ebeff2 !important;
+  background-clip: border-box;
+}
+
+select.form-control {
+  outline: 0;
+  border: 0px;
+  background: #ebeff2;
+}

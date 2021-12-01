@@ -1,0 +1,20 @@
+{
+    "apiEuUrl": "http://localhost:3012/",
+    "apiADUrl": "https://vast-re-api.re-sandbox.homestoryrewards.com/",
+
+
+    "postLoginAPI": "api/v1.0/partner/login",
+    "partnersAPI": "api/v1/ad/user/program/create",
+    "pogramesListAPI": "api/v1/ad/users/programes/list/",
+    "jobCreateAPI": "api/v1/ad/user/Job/create/",
+    "jobInsertAPI": "api/v1/ad/user/Job/insert/",
+    "getJobListAPI": "api/v1/ad/users/job/list/",
+    "ViewJobListAPI": "api/v1/ad/users/job/jobId/list/",
+    "ViewJobDUpListAPI": "api/v1/ad/users/job/dup/jobId/list/",
+    "GetLeadsListAPI": "api/v1.0/admin/leads?/",
+    "LeadCallInertAPI": "http://www.leadqual.com/post/sandbox/test-lead-post.php",
+    "getDashboardLeadsListAPI": "api/v1/ad/users/dashboard/leads/list/",
+    "getDashboardPogramesListAPI": "api/v1/ad/users/dashboard/programs/list/"
+    
+    
+}
