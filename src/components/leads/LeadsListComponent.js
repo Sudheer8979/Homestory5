@@ -1,5 +1,4 @@
 import React from 'react';
- import moment from 'moment'
  import { connect } from 'react-redux';
  import { t } from 'ttag';
  import Spinner from 'react-bootstrap/Spinner';
