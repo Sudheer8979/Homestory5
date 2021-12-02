@@ -1,7 +1,6 @@
 import React from 'react';
  import { connect } from 'react-redux';
  import { t } from 'ttag';
- import Spinner from 'react-bootstrap/Spinner';
  import noDataImg from '../../images/no-data.png';
  import hashHistory from '../../app.js';
  import DrawerWithHeader from '../drawer/Drawer';
@@ -26,7 +25,9 @@ import React from 'react';
        activePage: '1',
        searchString: this.state.searchString
      };
-     this.props.GetADUsersList(getObj, function (resObj) { });
+     this.props.GetADUsersList(getObj, function (resObj) {
+         
+      });
    }
    componentDidMount(){
     const _this = this;
@@ -118,10 +119,6 @@ import React from 'react';
                        <table className="table align-items-center table-flush">
                          <thead className="thead-light">
                            <tr>
-                           {/* <th scope="col" className="sort" data-sort="name">Job Id</th>
-                           <th scope="col" className="sort" data-sort="name">Programe Name</th>
-                           <th scope="col" className="sort" data-sort="name">Job Status</th>
-                           <th scope="col" className="sort" data-sort="completion">Actions</th> */}
                            
                               <th scope="col" className="sort" data-sort="name">Client</th>
                              <th scope="col" className="sort" data-sort="budget">Programe</th>
@@ -151,23 +148,7 @@ import React from 'react';
                           {allJobsList && allJobsList.map((item, i) =>
                            <tbody className="list" key={i}>
                              <tr>
-                               {/* <td className="budget">
-                                 
-                                 
-                                 <div className="profile-email">
-                                   <span style={{ paddingLeft: 20 }}>{item.jobId}</span>
-                                 </div>
-                               </td>
-                               <td>{item.programeName}</td>
-                               <td>{item.status} </td>
-                               <td>
-                               <a onClick={(event) => this.handleViewJobs(item, event)}
-                                  className="table-action table-action1"
-                                  data-toggle="tooltip"
-                                  title="Edit Admin User">
-                                  <i className="fas fa-user-edit" />
-                                </a>
-                                </td> */}
+                               
                                 <td>{item.partnerName}</td>
                                 <td>{item.programeName}</td>
                                 <td>{item.id} </td>
@@ -187,35 +168,10 @@ import React from 'react';
                                <td><p className="mb-0">{item.currentAssignments.REFERRAL_COORDINATOR.phone}</p></td>
                                <td><p className="mb-0">{item.currentAssignments.REFERRAL_COORDINATOR.phone}</p></td> 
                                
-                               {/* <td>
-                                 <div className="cell">
-                                   <div className="date"></div>
-                                 </div>
-                               </td> */}
-                               {/* <td></td> */}
-                               {/* <td> */}
-                               {/* <a 
-                                   className="table-action table-action1"
-                                   data-toggle="tooltip"
-                                   title="Edit Admin User">
-                                   <i className="fas fa-user-edit" />
-                                 </a>
-                                 <a 
-                                   className="table-action table-action7"
-                                   data-toggle="tooltip"
-                                   title="Update Address">
-                                   <i className="fas fa-map-marker-alt" />
-                                 </a> */}
-                                 
-                               {/* </td> */}
                              </tr>
                            </tbody>)} 
                        </table>
                      </div>
-                     : this.state.loading
-                       ? <div className='text-center'><Spinner animation="border" role="status">
-                         <span className="sr-only">Loading...</span>
-                       </Spinner></div>
                        : <div className="no-data">
                          <img src={noDataImg} alt="no data image" />
                          <p>{t`lanCommonLabelNoUsersFound`}</p>
