@@ -2,7 +2,6 @@ import React from 'react';
 import moment from 'moment'
 import { connect } from 'react-redux';
 import { t } from 'ttag';
-import Spinner from 'react-bootstrap/Spinner';
 import noDataImg from '../../images/no-data.png';
 import DrawerWithHeader from '../drawer/Drawer';
 import FooterComponent from '../Footer/Footer';
@@ -121,10 +120,7 @@ class PartnersListComponent extends React.PureComponent {
                           </tbody>)} 
                       </table>
                     </div>
-                    : this.state.loading
-                      ? <div className='text-center'><Spinner animation="border" role="status">
-                        <span className="sr-only">Loading...</span>
-                      </Spinner></div>
+                
                       : <div className="no-data">
                         <img src={noDataImg} alt="no data image" />
                         <p>{t`lanCommonLabelNoUsersFound`}</p>
