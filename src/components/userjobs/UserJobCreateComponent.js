@@ -1045,7 +1045,6 @@ class UserJobCreateComponent extends React.PureComponent {
     }
     if (["paramaterName"].includes(e.target.name)) {
       let paramaterList = [...this.state.paramaterList];
-      const value = e.target.value;
       
       paramaterList[e.target.dataset.id][e.target.name] = e.target.value;
       this.setState({ paramaterList: paramaterList, paramsName: paramaterList[idx].paramaterName })
@@ -1126,9 +1125,7 @@ class UserJobCreateComponent extends React.PureComponent {
           toast.success(resObj.statusResult.jobId   +'Create Successfully');
   
           _this.props.PostJobsList(_this.state.data, resObj.statusResult.jobId, (leadresObj) => {
-            if (leadresObj.statusCode === "9937") {
-             
-            }
+           
            
   
           });
@@ -1203,10 +1200,7 @@ class UserJobCreateComponent extends React.PureComponent {
           toast.success(resObj.statusResult.jobId   +'Job Create Successfully');
   
           _this.props.PostJobsList(_this.state.data, resObj.statusResult.jobId, (leadresObj) => {
-            if (leadresObj.statusCode === "9937") {
-             
-            }
-           
+            
   
           });
   
@@ -1214,8 +1208,6 @@ class UserJobCreateComponent extends React.PureComponent {
   
   
       });
-      //console.log("==========gopal")
-    //}, 1000 * 60 * 60);
       
     } else if(this.state.days ==='1'){
       toast.success('Sheduled Job Create Successfully');
@@ -1279,9 +1271,7 @@ class UserJobCreateComponent extends React.PureComponent {
           toast.success(resObj.statusResult.jobId   +'Job Create Successfully');
   
           _this.props.PostJobsList(_this.state.data, resObj.statusResult.jobId, (leadresObj) => {
-            if (leadresObj.statusCode === "9937") {
-             
-            }
+            
            
   
           });
@@ -1290,9 +1280,6 @@ class UserJobCreateComponent extends React.PureComponent {
   
   
       });
-      //console.log("==========gopal")
-    //}, 1000 * 60 * 60);
-      
     }
     else {
     var body = {
@@ -1394,7 +1381,6 @@ class UserJobCreateComponent extends React.PureComponent {
   handleJobTest =() => {
    const startIndex = this.state.paramaterList.find(item => item.paramaterName === "start-index");
    const limit = this.state.paramaterList.find(item => item.paramaterName === "limit");
-   //console.log("==============",foodBar1.stepOrder)
 
    
     var body = {
@@ -1478,7 +1464,7 @@ class UserJobCreateComponent extends React.PureComponent {
     this.setState({
         ProgrameNamechecked: ""
       });
-      //event.preventDefault();
+      event.preventDefault();
   }
 
  
@@ -1492,9 +1478,7 @@ class UserJobCreateComponent extends React.PureComponent {
 
   render() {
 
-   
-    //console.log(this.state.programesList && this.state.programesList)
-    let data = this.state.paramaterList && this.state.paramaterList
+       let data = this.state.paramaterList && this.state.paramaterList
     var leads = this.state.leadsList && this.state.leadsList.filter(x => x !== null)
     
     return (
