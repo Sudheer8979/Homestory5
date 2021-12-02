@@ -1,4 +1,3 @@
-import React, { useCallback } from 'react';
 import { connect } from 'react-redux';
 import DrawerWithHeader from '../drawer/Drawer';
 import FooterComponent from '../Footer/Footer';
@@ -13,19 +12,9 @@ class UserJobCreateComponent extends React.PureComponent {
     super();
     this.state = {
       paramaterList: [{ index:"", paramaterName: "", stepOrder: "" }],
-      DDL2: [],
-      selectddl: '',
-      AddMore: [],
-      AddMore1: [],
       paramsName: '',
       startindex: '',
       errorMessage: '',
-      intervalType: '',
-      gender: '',
-      uuid: '',
-      leadIds: '',
-      interval: '',
-
       limit: '',
       showall: '',
       latestStatus: '',
@@ -37,7 +26,6 @@ class UserJobCreateComponent extends React.PureComponent {
       lastName: '',
       email: '',
       phone: '',
-
       contacted: '',
       transactionType: '',
       ids: '',
@@ -71,39 +59,6 @@ class UserJobCreateComponent extends React.PureComponent {
       unassigned: '',
       startIndexchecked: false,
       ProgrameNamechecked: false,
-      Partnerchecked: false,
-      limitchecked: false,
-      showallchecked: false,
-      latestchecked: false,
-      currentpartnerchecked: false,
-      currentemailchecked: false,
-      brokeragecodechecked: false,
-      firstnamechecked: false,
-      lastnamechecked: false,
-      phonechecked: false,
-      contactedchecked: false,
-      typechecked: false,
-      idchecked: false,
-      caechecked: false,
-      lschecked: false,
-      sortchecked: false,
-      connectionconfirmedchecked: false,
-      hscchecked: false,
-      rebatePaidchecked: false,
-      documentationReceivedchecked: false,
-      fundsReceivedchecked: false,
-      chaseIdchecked: false,
-      loanDetailsSharingEnabledchecked: false,
-      brokerageContactedchecked: false,
-      fullNamechecked: false,
-      aggregateIdchecked: false,
-      CAchecked: false,
-      CAEchecked: false,
-      consumerAcceptedchecked: false,
-      hideContactDetailschecked: false,
-      siblingProfileIdchecked: false,
-      unassignedchecked: false,
-      pgName: [],
       partnerName: '',
       DDL1: [
         { name: 'start-index' },
@@ -1059,7 +1014,6 @@ class UserJobCreateComponent extends React.PureComponent {
   //}, 1000);
   }
   add(e) {
-    const stepOrderValue = this.state.paramaterList.length + 1;
     this.setState((prevState) => ({
       paramaterList: [...prevState.paramaterList, { index: "", paramaterName: "", stepOrder: "" }],
       pgsName1: ''
