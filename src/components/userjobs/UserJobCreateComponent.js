@@ -1478,7 +1478,7 @@ class UserJobCreateComponent extends React.PureComponent {
 
   render() {
 
-       var data = this.state.paramaterList && this.state.paramaterList
+    let data = this.state.paramaterList ? this.state.paramaterList: ''
     var leads = this.state.leadsList && this.state.leadsList.filter(x => x !== null)
     
     return (
