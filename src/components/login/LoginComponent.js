@@ -19,7 +19,7 @@ class LoginComponent extends React.PureComponent {
       userID: '',
       password: '',
       userErrorMessage: '',
-      passwordErrorMessage: '',
+      user1ErrorMessage: '',
       adUsersList: [{
         "sessionId": "11ad6013-faaa-4560-bf69-13b31bd06c70",
         "profile": {
@@ -60,7 +60,7 @@ class LoginComponent extends React.PureComponent {
     if (!this.state.userID.trim()) {
       this.setState({ userErrorMessage: "User ID or Mobile Number is required" });
     } else if (!this.state.password) {
-      this.setState({ passwordErrorMessage: "Please fill the required field" });
+      this.setState({ user1ErrorMessage: "Please fill the required field" });
     } else {
       const loginObj = {
         userID: this.state.userID,
