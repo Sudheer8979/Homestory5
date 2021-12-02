@@ -1,9 +1,5 @@
 import React from 'react';
-import moment from 'moment'
 import { connect } from 'react-redux';
-import { t } from 'ttag';
-import Spinner from 'react-bootstrap/Spinner';
-import noDataImg from '../../images/no-data.png';
 import DrawerWithHeader from '../drawer/Drawer';
 import FooterComponent from '../Footer/Footer';
 import '../../styles/argon.min.css';
@@ -11,13 +7,6 @@ class LeadListComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      adUsersList :[
-        {
-        "sNo":"1","uuId":"2554",
-        "name":"HSBC","email":"hscbc@gmail.com","mobileNumber":"9550012366","Created Date":" 2021-10-28"},
-        {
-        "sNo":"2","uuId":"2556",
-        "name":"AXIs","email":"axis@gmail.com","mobileNumber":"9550012377","Created Date":" 2021-10-28"}]
     };
     }
  render() {
